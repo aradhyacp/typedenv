@@ -11,6 +11,7 @@ export class EnverifyError extends Error {
         super(message)
         this.name = 'EnverifyError'
         this.failures = failures
+        this.stack = undefined
 
         Object.setPrototypeOf(this, EnverifyError.prototype)
     }
