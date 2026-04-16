@@ -1,15 +1,15 @@
 {
-  "name": "enverify",
+  "name": "typedenv",
   "version": "1.0.0",
   "description": "Type-safe environment variable validation for Node.js. Zero dependencies.",
   "author": "aradhyacp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aradhyacp/enverify.git"
+    "url": "https://github.com/aradhyacp/typedenv.git"
   },
-  "homepage": "https://github.com/aradhyacp/enverify#readme",
+  "homepage": "https://github.com/aradhyacp/typedenv#readme",
   "bugs": {
-    "url": "https://github.com/aradhyacp/enverify/issues"
+    "url": "https://github.com/aradhyacp/typedenv/issues"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
