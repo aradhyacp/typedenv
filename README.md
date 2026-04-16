@@ -1,12 +1,12 @@
-# enverify
+# ts-enverify
 
 **Type-safe environment variable validation for Node.js.**  
 Catch missing or malformed env vars at startup — before they silently break your app.
 
 Zero dependencies. Works with any framework. Infers TypeScript types automatically.
 
-[![npm version](https://img.shields.io/npm/v/enverify.svg)](https://www.npmjs.com/package/enverify)
-[![license](https://img.shields.io/npm/l/enverify.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/ts-enverify.svg)](https://www.npmjs.com/package/ts-enverify)
+[![license](https://img.shields.io/npm/l/ts-enverify.svg)](./LICENSE)
 
 ---
 
@@ -26,7 +26,7 @@ app, not at startup where it's easy to catch.
 ## Install
 
 ```bash
-npm i enverify
+npm i ts-enverify
 ```
 
 ---
@@ -34,7 +34,7 @@ npm i enverify
 ## Usage
 
 ```ts
-import { enverify } from 'enverify'
+import { enverify } from 'ts-enverify'
 
 const env = enverify({
   DATABASE_URL: { type: 'string',  required: true },
@@ -59,7 +59,7 @@ If validation fails, the process exits immediately with a clear message.
 
 ```ts
 import 'dotenv/config'       // load .env into process.env
-import { enverify } from 'enverify'  // then validate it
+import { enverify } from 'ts-enverify'  // then validate it
 
 const env = enverify({ ... })
 ```
@@ -101,7 +101,7 @@ When validation fails, enverify throws **before your app starts** and
 shows every problem at once — not just the first one:
 
 ```
-✗ enverify validation failed:
+✗ ts-enverify validation failed:
 
   → DATABASE_URL: required but not set
   → PORT: expected a number, got "abc"
@@ -129,11 +129,11 @@ const env = enverify(schema, {
 
 Zod is a great general-purpose validator, but using it for env vars requires
 wiring up `z.object()`, `.parse()`, and a custom coercion setup every time.
-enverify is one focused tool that does exactly this job — no boilerplate,
-no extra concepts, just a schema and a typed result.
+ts-enverify gives you one focused tool for this exact job — the `enverify`
+function — with no boilerplate and a typed result.
 
 ---
 
 ## License
 
-MIT — [aradhyacp](https://github.com/aradhyacp/enverify)
+MIT — [aradhyacp](https://github.com/aradhyacp/ts-enverify)
