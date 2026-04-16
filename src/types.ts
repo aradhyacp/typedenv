@@ -29,7 +29,7 @@ export type EnumField = {
 
 export type FieldSchema = StringField | NumberField | BooleanField | EnumField
 
-export type TypedEnvSchema = Record<string, FieldSchema>
+export type EnverifySchema = Record<string, FieldSchema>
 
 type InferFieldType<T extends FieldSchema> =
 T extends {type:'string'} ? string :
@@ -42,6 +42,6 @@ T extends {required:true}? InferFieldType<T> :
 T extends {default: unknown}? InferFieldType<T> :
 InferFieldType<T> | undefined
 
-export type InferEnv<S extends TypedEnvSchema> = {
+export type InferEnv<S extends EnverifySchema> = {
     [K in keyof S]: InferField<S[K]>
 }
